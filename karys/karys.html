@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>KARYS – Nabiał z Gorzowa Wielkopolskiego</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+color: #333;
+}
+
+header {
+background-color: white;
+border-bottom: 3px solid #005bbb;
+padding: 15px;
+}
+
+.header-content {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+
+.logo {
+height: 80px;
+}
+
+nav {
+margin-top: 15px;
+display: flex;
+justify-content: center;
+gap: 25px;
+}
+
+nav a {
+text-decoration: none;
+color: #005bbb;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #009933;
+}
+
+section {
+background-color: white;
+margin: 30px auto;
+padding: 30px;
+max-width: 1000px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+color: #005bbb;
+}
+
+.products {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.product {
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 6px;
+text-align: center;
+}
+
+button {
+background-color: #005bbb;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #009933;
+}
+
+footer {
+background-color: #222;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 40px;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 600px) {
+.header-content {
+flex-direction: column;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<img src="logo-karys.png" alt="Logo KARYS" class="logo">
+<div>
+<h1>KARYS</h1>
+<p>Nabiał z Gorzowa Wielkopolskiego</p>
+</div>
+</div>
+
+<nav>
+<a href="#o-nas">O nas</a>
+<a href="#produkty">Produkty</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<section id="o-nas">
+<h2>O firmie</h2>
+<p>
+Firma <strong>KARYS</strong> to lokalny producent nabiału z Gorzowa Wielkopolskiego.
+Specjalizujemy się w produkcji naturalnych wyrobów mlecznych
+tworzonych według tradycyjnych receptur.
+</p>
+</section>
+
+<section id="produkty">
+<h2>Nasze produkty</h2>
+
+<div class="products">
+<div class="product">
+<h3>Świeże mleko</h3>
+<p>Naturalne mleko bez dodatków.</p>
+<button onclick="showInfo('Mleko świeże')">Więcej informacji</button>
+</div>
+
+<div class="product">
+<h3>Ser wiejski</h3>
+<p>Tradycyjny ser twarogowy.</p>
+<button onclick="showInfo('Ser wiejski')">Więcej informacji</button>
+</div>
+
+<div class="product">
+<h3>Jogurt naturalny</h3>
+<p>Bez cukru i konserwantów.</p>
+<button onclick="showInfo('Jogurt naturalny')">Więcej informacji</button>
+</div>
+</div>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p><strong>KARYS</strong></p>
+<p>Gorzów Wielkopolski</p>
+<p>📞 123 456 789</p>
+
+<button onclick="changeText()">Kliknij, aby wyświetlić wiadomość</button>
+<p id="message"></p>
+</section>
+
+<footer>
+<p>&copy; 2026 KARYS</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function showInfo(product) {
+alert("Wybrany produkt: " + product + ". Produkt wysokiej jakości.");
+}
+
+function changeText() {
+document.getElementById("message").innerText =
+"Dziękujemy za zainteresowanie ofertą firmy KARYS!";
+}
+</script>
+
+</body>
+</html>
